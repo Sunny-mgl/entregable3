@@ -24,9 +24,9 @@ function App() {
 
   console.log(rickis)
 
-const color = ["#0F3B3D", "#136158", "#245465", "#348968"]
-const colorNew = Math.floor(Math.random()* color.length)
-document.body.style = `background: ${color[colorNew]}`
+  const color = ["#0F3B3D", "#136158", "#245465", "#348968"]
+  const colorNew = Math.floor(Math.random() * color.length)
+  document.body.style = `background: ${color[colorNew]}`
 
   return (
     <div className="App">
@@ -47,13 +47,13 @@ document.body.style = `background: ${color[colorNew]}`
         <button onClick={search}>Search</button>
       </div>
       <h2>{rickis.name}</h2>
-       <ul>
+      <ul>
         {
-      rickis.residents?.map(ricki => (
-      <Rick  rickis={ricki}  key={ricki} />
-      ))
-      }
-       </ul>
+          rickis.residents?.map(ricki => (
+            <Rick rickis={ricki} key={ricki} />
+          ))
+        }
+      </ul>
 
     </div>
   )
