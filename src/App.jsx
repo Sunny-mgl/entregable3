@@ -40,7 +40,7 @@ function App() {
       <div className='name'>
 
         <input type="text"
-          placeholder='Characters'
+          placeholder='Dimensions ID'
           value={searchs}
           onChange={e => setSearchs(e.target.value)}
         />
