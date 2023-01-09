@@ -50,7 +50,7 @@ function App() {
         <h3> Name: <br /> {rickis.name}</h3>
         <h3> Type: <br /> {rickis.type}</h3>
         <h3> Dimension: <br /> {rickis.dimension}</h3>
-        <h3> Dwellers: <br /> {rickis.residents?.length}</h3>
+        <h3> Population: <br /> {rickis.residents?.length}</h3>
       </div>
       
       <ul className='residents-list'>
