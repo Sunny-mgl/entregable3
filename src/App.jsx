@@ -31,11 +31,11 @@ function App() {
   return (
     <div className="App">
       <div className='image'>
-        <img src={Diagrm} alt="" />
+        <img src={Diagram} alt="" />
       </div>
       <br />
 
-      <h1>Rick and Morty</h1>
+      {/* <h1>Rick and Morty</h1> */}
 
       <div className='name'>
 
@@ -46,8 +46,14 @@ function App() {
         />
         <button onClick={search}>Search</button>
       </div>
-      <h2>{rickis.name}</h2>
-      <ul>
+      <div className='description'>
+        <h3> Name: <br /> {rickis.name}</h3>
+        <h3> Type: <br /> {rickis.type}</h3>
+        <h3> Dimension: <br /> {rickis.dimension}</h3>
+        <h3> Dwellers: <br /> {rickis.residents?.length}</h3>
+      </div>
+      
+      <ul className='residents-list'>
         {
           rickis.residents?.map(ricki => (
             <Rick rickis={ricki} key={ricki} />

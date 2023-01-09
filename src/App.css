@@ -13,19 +13,25 @@
   box-sizing: border-box;
 }
 
-.App{
+/*.App{
 padding: 1rem;
-}
+}*/
 
-.App h1{
-  margin-top: 12rem;
+/* .App h1{
+  font-size: 50px;
+  color: antiquewhite;
+  margin-top: 1rem;
   text-align: center;
-}
+} */
 
-.App h2 {
-  text-align: center;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+.App h3 {
+  font-size: 15px;
+  color: antiquewhite;
+  display: flex;
+  align-items: center;
+  text-align: initial;
+  /* margin-top: 1.5rem;
+  margin-bottom: 1rem; */
 }
 
 .App button{
@@ -42,17 +48,33 @@ padding: 1rem;
  }
 
 .name {
-text-align: center;
+ text-align: center;
  font-size: 15px;
- margin-top: 1.5rem;
+ /* margin-top: 1.5rem; */
 }
 
+
+.description{
+  background-color: #062226;
+  padding: 1rem;
+  margin: 1rem 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: stretch;
+  grid-column-gap: 7rem;
+  grid-row-gap: 1rem;
+}
+
+
 .image img{ 
-position: absolute;
-width: 100%;
+/*position: absolute;*/
+margin: 0 auto;
+/*padding: 0 auto;
 left: 0px;
 top: 0px;
-z-index: -100;
+z-index: -100;*/
+width: 100%;
+/* max-height: 180px; */
 
 }
 
@@ -60,25 +82,36 @@ z-index: -100;
   list-style: none;
   background-color: #062226;
   color: antiquewhite;
-  padding: 1rem;
-  margin-bottom: 1rem;
+  /*padding: 1rem;*/
+  /*margin-bottom: 1rem;*/
   border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+
+.residents-list{
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
 }
 
 .morty img{
-  width: 50%;
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
 }
 
 #part1{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
  
 }
 
 
 #part1 > div{
-  width: 50%;
-  margin-left: 1rem;
+  width: 100%;
+  padding: 1rem;
 }
 
 .details h3{
@@ -94,4 +127,47 @@ z-index: -100;
 .details p{
   color: rgba(250, 235, 215, 0.466);
   margin-bottom: rem;
+}
+
+
+@media (min-width: 500px) {
+  .residents-list{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .description{
+    margin: 1rem 2rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    grid-column-gap: 3rem;
+
+  }
+
+}
+
+
+@media (min-width: 765px) {
+  .residents-list{
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .description{
+    padding: 2rem;
+    margin: 1rem 7rem;
+  }
+}
+
+
+@media (min-width: 992px) {
+  .residents-list{
+    grid-template-columns: repeat(4, 1fr);
+
+  }
+
+  .description{
+    margin: 1rem 8rem;
+    padding: 2rem;
+    display: flex;
+  }
 }
